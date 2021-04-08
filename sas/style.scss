@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  max-width: 80vw;
+  @include width-height(80vw, 40vw);
   position: relative;
   .fa-chevron-left,
   .fa-chevron-right {

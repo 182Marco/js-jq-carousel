@@ -31,13 +31,25 @@ $(document).ready(function () {
     nowActiveCircle.removeClass(`active`);
     // spostare gli active
     if (direction == `left`) {
-      console.log(`left`);
-      nowActiveImg.prev().addClass(`active`);
-      nowActiveCircle.prev().addClass(`active`);
+      // se siamo first andare a last
+      if (nowActiveImg.hasClass(`first`)) {
+        imgLast.addClass(`active`);
+        circleLast.addClass(`active`);
+      } else {
+        //  gli altri casi verso sx
+        nowActiveImg.prev().addClass(`active`);
+        nowActiveCircle.prev().addClass(`active`);
+      }
     } else {
-      console.log(`right`);
-      nowActiveImg.next().addClass(`active`);
-      nowActiveCircle.next().addClass(`active`);
+      // se siamo a last andare a first
+      if (nowActiveImg.hasClass(`last`)) {
+        imgFirst.addClass(`active`);
+        circleFirst.addClass(`active`);
+      } else {
+        //  gli altri casi verso dx
+        nowActiveImg.next().addClass(`active`);
+        nowActiveCircle.next().addClass(`active`);
+      }
     }
   }
 });

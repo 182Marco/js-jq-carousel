@@ -1,7 +1,7 @@
 .img.active {
   display: block;
-  -webkit-animation: slide-left 3s;
-          animation: slide-left 3s;
+  -webkit-animation: slide-left 0.2s;
+          animation: slide-left 0.2s;
 }
 
 @-webkit-keyframes slide-left {
@@ -120,7 +120,8 @@ body {
 }
 
 main {
-  max-width: 80vw;
+  width: 80vw;
+  height: 40vw;
   position: relative;
 }
 
