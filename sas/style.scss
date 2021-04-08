@@ -1,9 +1,8 @@
-@import 'mixin.scss';
 @import 'variabiles.scss';
-@import '_jsClasses.scss';
-@import 'typography.scss';
+@import 'mixin.scss';
 @import 'utility.scss';
 @import 'reset.scss';
+@import 'typography.scss';
 
 body {
   font-family: sans-serif;
@@ -61,3 +60,5 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
+
+@import '_jsClasses.scss';
