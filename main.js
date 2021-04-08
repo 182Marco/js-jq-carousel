@@ -1,11 +1,9 @@
 $(document).ready(function () {
   // REFERENZE
   // referenze img
-  img = $(`main .img-wrap .img`);
   imgFirst = $(`main .img-wrap .img.first`);
   imgLast = $(`main .img-wrap .img.last`);
   // referenze cerchi
-  circle = $(`main .circle-wrap .circle`);
   circleFirst = $(`main .circle-wrap .circle.first`);
   circleLast = $(`main .circle-wrap .circle.last`);
   // referenze freccie
@@ -30,11 +28,8 @@ dalle freccie di tastiera */
   function changePic(direction) {
     var nowActiveImg = $(`.img.active`);
     var nowActiveCircle = $(`.circle.active`);
-    // slide in uscita
-    nowActiveImg.addClass(`slide-right`);
-
     //reset degli active
-    nowActiveImg.removeClass(`active slide-right`);
+    nowActiveImg.removeClass(`active`);
     nowActiveCircle.removeClass(`active`);
     // spostare gli active
     if (direction == `left`) {

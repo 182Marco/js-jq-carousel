@@ -11,17 +11,18 @@
     left: 0;
   }
 }
-img.img.slide-right {
-  animation: slide-right 0.2s forwards;
-}
-@keyframes slide-right {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100%;
-  }
-}
+
+// img.img.slide-right {
+//   animation: slide-right 0.2s forwards;
+// }
+// @keyframes slide-right {
+//   0% {
+//     left: 0;
+//   }
+//   100% {
+//     left: 100%;
+//   }
+// }
 
 .circle.active {
   background-color: $pureW;

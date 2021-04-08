@@ -22,29 +22,6 @@
   }
 }
 
-img.img.slide-right {
-  -webkit-animation: slide-right 0.2s forwards;
-          animation: slide-right 0.2s forwards;
-}
-
-@-webkit-keyframes slide-right {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes slide-right {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
 .circle.active {
   background-color: #fff;
   border-color: #fff;
