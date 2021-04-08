@@ -1,5 +1,25 @@
 .img.active {
   display: block;
+  -webkit-animation: slide-left 3s;
+          animation: slide-left 3s;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 .circle.active {
@@ -100,7 +120,7 @@ body {
 }
 
 main {
-  max-width: 80%;
+  max-width: 80vw;
   position: relative;
 }
 
@@ -165,5 +185,6 @@ main .fa-chevron-left {
   height: 8px;
   background-color: #999;
   border-radius: 50%;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

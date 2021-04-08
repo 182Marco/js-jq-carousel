@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  max-width: 80%;
+  max-width: 80vw;
   position: relative;
   .fa-chevron-left,
   .fa-chevron-right {
@@ -60,4 +60,5 @@ main {
   @include width-height(8px, 8px);
   background-color: $semiLightTxt;
   border-radius: 50%;
+  cursor: pointer;
 }
