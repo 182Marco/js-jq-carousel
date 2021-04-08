@@ -1,9 +1,11 @@
 $(document).ready(function () {
   // REFERENZE
   // referenze img
+  img = $(`main .img-wrap .img`);
   imgFirst = $(`main .img-wrap .img.first`);
   imgLast = $(`main .img-wrap .img.last`);
   // referenze cerchi
+  circle = $(`main .circle-wrap .circle`);
   circleFirst = $(`main .circle-wrap .circle.first`);
   circleLast = $(`main .circle-wrap .circle.last`);
   // referenze freccie
@@ -29,8 +31,7 @@ dalle freccie di tastiera */
     var nowActiveImg = $(`.img.active`);
     var nowActiveCircle = $(`.circle.active`);
     //reset degli active
-    nowActiveImg.removeClass(`active`);
-    nowActiveCircle.removeClass(`active`);
+    reset();
     // spostare gli active
     if (direction == `left`) {
       // se siamo first andare a last
@@ -54,4 +55,19 @@ dalle freccie di tastiera */
       }
     }
   }
+
+  //   attivare lo slide con click su cerchi
+  circle.click(function () {
+    reset();
+    // individuazione indice al click
+    var index = circle.index(this);
+    // attribuzione delle classi
+    $(img[index]).addClass(`active`);
+    $(circle[index]).addClass(`active`);
+  });
 });
+
+function reset() {
+  img.removeClass(`active`);
+  circle.removeClass(`active`);
+}
