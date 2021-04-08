@@ -1,7 +1,7 @@
 @import 'mixin.scss';
+@import 'variabiles.scss';
 @import '_jsClasses.scss';
 @import 'typography.scss';
-@import 'variabiles.scss';
 @import 'utility.scss';
 @import 'reset.scss';
 
@@ -29,17 +29,6 @@ main {
     }
   }
 
-  .img-wrap {
-    @include width-height(100%, 100%);
-    overflow: hidden;
-  }
-
-  img {
-    position: relative;
-    display: none;
-    width: 100%;
-  }
-
   .fa-chevron-right {
     left: 103%;
   }
@@ -51,14 +40,25 @@ main {
 
 .circle-wrap {
   margin: 12px auto 0;
-  width: 50px;
+  width: 45px;
   @include flex(row, space-between, flex-start);
   top: 105%;
 }
 
+.img-wrap {
+  @include width-height(100%, 100%);
+  overflow: hidden;
+}
+
+img {
+  position: relative;
+  display: none;
+  width: 100%;
+}
+
 .circle {
   @include width-height(8px, 8px);
-  background-color: $semiLightTxt;
+  border: 1px solid $semiLightTxt;
   border-radius: 50%;
   cursor: pointer;
 }

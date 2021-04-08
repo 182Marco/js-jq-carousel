@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // REFERENZE
   // referenze img
   img = $(`main .img-wrap .img`);
   imgFirst = $(`main .img-wrap .img.first`);
@@ -11,9 +12,12 @@ $(document).ready(function () {
   arrowLeft = $(`main .fa-chevron-left`);
   arrowRight = $(`main .fa-chevron-right`);
 
+  // EVENTI
+  // attibazione dello slider on click
   arrowLeft.click(() => changePic(`left`));
   arrowRight.click(() => changePic(`right`));
-
+  /*   attivazione dello slider 
+dalle freccie di tastiera */
   $(document).keydown((e) => {
     if (e.keyCode == 37) {
       changePic(`left`);
@@ -26,8 +30,11 @@ $(document).ready(function () {
   function changePic(direction) {
     var nowActiveImg = $(`.img.active`);
     var nowActiveCircle = $(`.circle.active`);
+    // slide in uscita
+    nowActiveImg.addClass(`slide-right`);
+
     //reset degli active
-    nowActiveImg.removeClass(`active`);
+    nowActiveImg.removeClass(`active slide-right`);
     nowActiveCircle.removeClass(`active`);
     // spostare gli active
     if (direction == `left`) {
