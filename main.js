@@ -33,6 +33,7 @@ dalle freccie di tastiera */
     //reset degli active
     reset();
     // spostare gli active
+    // se freccia dx
     if (direction == `left`) {
       // se siamo first andare a last
       if (nowActiveImg.hasClass(`first`)) {
@@ -43,6 +44,7 @@ dalle freccie di tastiera */
         nowActiveImg.prev().addClass(`active slide-left`);
         nowActiveCircle.prev().addClass(`active slide-left`);
       }
+      // se freccia sx
     } else {
       // se siamo a last andare a first
       if (nowActiveImg.hasClass(`last`)) {
