@@ -36,18 +36,17 @@ main {
   .fa-chevron-left {
     right: 103%;
   }
-}
+  .circle-wrap {
+    margin: 12px auto 0;
+    width: 45px;
+    @include flex(row, space-between, flex-start);
+    top: 105%;
+  }
 
-.circle-wrap {
-  margin: 12px auto 0;
-  width: 45px;
-  @include flex(row, space-between, flex-start);
-  top: 105%;
-}
-
-.img-wrap {
-  @include width-height(100%, 100%);
-  overflow: hidden;
+  .img-wrap {
+    @include width-height(100%, 100%);
+    overflow: hidden;
+  }
 }
 
 img {

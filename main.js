@@ -1,9 +1,9 @@
 $(document).ready(function () {
   // REFERENZE
   // referenze img
-  img = $(`main .img-wrap .img`);
-  imgFirst = $(`main .img-wrap .img.first`);
-  imgLast = $(`main .img-wrap .img.last`);
+  img = $(`main .img-wrap img`);
+  imgFirst = $(`main .img-wrap img.first`);
+  imgLast = $(`main .img-wrap img.last`);
   // referenze cerchi
   circle = $(`main .circle-wrap .circle`);
   circleFirst = $(`main .circle-wrap .circle.first`);
@@ -28,7 +28,7 @@ dalle freccie di tastiera */
 
   // FUNZIONE UTILITY
   function changePic(direction) {
-    var nowActiveImg = $(`.img.active`);
+    var nowActiveImg = $(`img.active`);
     var nowActiveCircle = $(`.circle.active`);
     //reset degli active
     reset();
@@ -36,22 +36,22 @@ dalle freccie di tastiera */
     if (direction == `left`) {
       // se siamo first andare a last
       if (nowActiveImg.hasClass(`first`)) {
-        imgLast.addClass(`active`);
-        circleLast.addClass(`active`);
+        imgLast.addClass(`active slide-left`);
+        circleLast.addClass(`active slide-left`);
       } else {
         //  gli altri casi verso sx
-        nowActiveImg.prev().addClass(`active`);
-        nowActiveCircle.prev().addClass(`active`);
+        nowActiveImg.prev().addClass(`active slide-left`);
+        nowActiveCircle.prev().addClass(`active slide-left`);
       }
     } else {
       // se siamo a last andare a first
       if (nowActiveImg.hasClass(`last`)) {
-        imgFirst.addClass(`active`);
-        circleFirst.addClass(`active`);
+        imgFirst.addClass(`active slide-right`);
+        circleFirst.addClass(`active slide-right`);
       } else {
         //  gli altri casi verso dx
-        nowActiveImg.next().addClass(`active`);
-        nowActiveCircle.next().addClass(`active`);
+        nowActiveImg.next().addClass(`active slide-right`);
+        nowActiveCircle.next().addClass(`active slide-right`);
       }
     }
   }
@@ -68,6 +68,6 @@ dalle freccie di tastiera */
 });
 
 function reset() {
-  img.removeClass(`active`);
+  img.removeClass(`active slide-left slide-right`);
   circle.removeClass(`active`);
 }

@@ -1,5 +1,8 @@
-.img.active {
+img.active {
   display: block;
+}
+
+img.active.slide-left {
   -webkit-animation: slide-left 0.2s;
           animation: slide-left 0.2s;
 }
@@ -16,6 +19,29 @@
 @keyframes slide-left {
   0% {
     left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+img.active.slide-right {
+  -webkit-animation: slide-right 0.2s forwards;
+          animation: slide-right 0.2s forwards;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    left: 100%;
   }
   100% {
     left: 0;
@@ -151,7 +177,7 @@ main .fa-chevron-left {
   right: 103%;
 }
 
-.circle-wrap {
+main .circle-wrap {
   margin: 12px auto 0;
   width: 45px;
   display: -webkit-box;
@@ -170,7 +196,7 @@ main .fa-chevron-left {
   top: 105%;
 }
 
-.img-wrap {
+main .img-wrap {
   width: 100%;
   height: 100%;
   overflow: hidden;
