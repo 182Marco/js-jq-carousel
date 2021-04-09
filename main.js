@@ -62,7 +62,7 @@ dalle freccie di tastiera */
   circle.click(function () {
     reset();
     // individuazione indice al click
-    var index = circle.index(this);
+    var index = index(this);
     // attribuzione delle classi
     $(img[index]).addClass(`active`);
     $(circle[index]).addClass(`active`);
